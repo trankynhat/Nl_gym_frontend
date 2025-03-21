@@ -1,0 +1,32 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cố định vị trí bắt đầu */
+    min-height: 100vh; /* Đảm bảo form không bị kéo dãn */
+    padding-top: 100px; /* Điều chỉnh khoảng cách từ Navbar */
+    background-color: #e7f1d4;
+  }
+  
+  .auth-form {
+    width: 400px; /* Điều chỉnh chiều rộng */
+    max-width: 90%; /* Đảm bảo không bị tràn trên màn hình nhỏ */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-form .form-control {
+    border-radius: 5px;
+  }
+  
+  .auth-form .btn {
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
