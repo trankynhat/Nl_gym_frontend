@@ -11,14 +11,15 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
-          ☰
-        </div>
         <Link to="/" className="nav-logo">
           Gym Manager 🏋️
         </Link>
 
-        <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
+        <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+          ☰
+        </div>
+
+        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li>
             <NavLink
               to="/"

@@ -1,0 +1,102 @@
+.user-list-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* Căn nội dung về bên trái */
+  font-family: Arial, sans-serif;
+}
+
+.user-list-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-table th,
+.user-list-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left; /* Căn nội dung bảng về bên trái */
+}
+
+.user-list-table th {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.user-list-table th:hover {
+  background-color: #0056b3;
+}
+
+.user-list-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-list-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.user-list-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn-change-password,
+.btn-delete-user {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-change-password {
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-change-password:hover {
+  background-color: #218838;
+}
+
+.btn-delete-user {
+  background-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete-user:hover {
+  background-color: #c82333;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}

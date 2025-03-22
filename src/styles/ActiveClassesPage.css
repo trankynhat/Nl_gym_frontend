@@ -1,0 +1,54 @@
+.active-classes-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.active-classes-container h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.active-classes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.active-classes-table th,
+.active-classes-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.active-classes-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.active-classes-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.active-classes-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.active-classes-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}

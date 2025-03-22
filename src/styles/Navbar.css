@@ -1,99 +1,109 @@
-/* Navbar tổng quát */
+/* Navbar container */
 .navbar {
-    background: #222;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center; /* Căn giữa */
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Container chứa tất cả phần tử */
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-  }
-  
-  /* Icon menu (☰) */
+  background-color: #061e37; /* Màu xanh đậm */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar container layout */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Toggle button for mobile */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+/* Navigation links */
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background-color: #0a2a4a; /* Màu xanh đậm hơn khi hover */
+}
+
+/* Logout button */
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
   .nav-toggle {
-    font-size: 1.8rem;
-    cursor: pointer;
-    display: none; /* Ẩn trên desktop */
+    display: block;
   }
-  
-  /* Logo */
-  .nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white; 
-  }
-  
-  /* Menu */
+
   .nav-menu {
-    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #061e37;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
     display: flex;
-    gap: 30px;
   }
-  
-  .nav-menu li {
-    display: inline;
-  }
-  
-  .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 5px 15px;
-  }
-  
-  .nav-menu .active {
-    border-bottom: 3px solid #00ffcc;
-    font-weight: bold;
-  }
-  
-  /* Điều chỉnh khoảng cách nội dung phía dưới */
-  .content {
-    padding-top: 70px;
-  }
-  
-  /* Responsive: Khi màn hình nhỏ hơn 768px */
-  @media screen and (max-width: 768px) {
-    .nav-toggle {
-      display: block; /* Hiển thị icon ☰ */
-    }
-  
-    .nav-menu {
-      display: none; /* Mặc định ẩn */
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: #333;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 0;
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .nav-menu.active {
-      display: flex;
-    }
-  
-    .nav-menu li {
-      width: 100%;
-      text-align: center;
-      padding: 10px 0;
-    }
-  }
-  
+}

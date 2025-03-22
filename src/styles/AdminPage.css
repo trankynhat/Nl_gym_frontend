@@ -1,0 +1,77 @@
+/* Container chính */
+.admin-page-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+.admin-page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.admin-nav {
+  margin-top: 20px;
+}
+
+.admin-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-nav-item {
+  margin-bottom: 10px;
+}
+
+.admin-nav-link {
+  display: block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.admin-nav-link:hover {
+  background-color: #0056b3;
+}
+
+/* Thông báo lỗi */
+.error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.admin-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 15px;
+  text-align: center;
+}
