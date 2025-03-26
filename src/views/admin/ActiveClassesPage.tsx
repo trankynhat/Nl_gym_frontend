@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/ActiveClassesPage.css";
+import "../../styles/ActiveClassesPage.css";
 
 const ActiveClassesPage = () => {
   // Dữ liệu mẫu cứng

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/CreateClassTemplatePage.css";
+import "../../styles/CreateClassTemplatePage.css";
 
 const CreateClassTemplatePage = () => {
   const [name, setName] = useState("");
@@ -16,18 +16,20 @@ const CreateClassTemplatePage = () => {
     setSuccess(null);
 
     try {
-      const token = localStorage.getItem("token"); // Lấy token từ localStorage
+      // Lấy token từ localStorage
+      const token = localStorage.getItem("token");
       if (!token) {
         throw new Error("Bạn chưa đăng nhập!");
       }
 
+      // Gửi request đến API
       const response = await axios.post(
-        "http://localhost:8080/api/admin/class-templates",
+        "http://localhost:8080/api/admin/addClassTemplate",
         {
           name,
           description,
-          default_duration: defaultDuration,
-          max_participants: maxParticipants,
+          default_duration: defaultDuration, // Sử dụng snake_case để tương thích với backend
+          max_participants: maxParticipants, // Sử dụng snake_case để tương thích với backend
         },
         {
           headers: {
@@ -36,13 +38,20 @@ const CreateClassTemplatePage = () => {
         }
       );
 
+      // Hiển thị response bằng alert
+      alert(`Response: ${response.data}`);
+
+      // Cập nhật trạng thái thành công và reset form
       setSuccess("Lớp học mẫu đã được tạo thành công!");
       setName("");
       setDescription("");
       setDefaultDuration("");
       setMaxParticipants("");
     } catch (err: any) {
-      setError(err.response?.data?.message || "Không thể tạo lớp học mẫu!");
+      // Xử lý lỗi và hiển thị thông báo lỗi
+      const errorMessage =
+        err.response?.data?.message || "Không thể tạo lớp học mẫu!";
+      setError(errorMessage);
     }
   };
 
@@ -50,9 +59,11 @@ const CreateClassTemplatePage = () => {
     <div className="create-class-template-container">
       <h1>Tạo Lớp Học Mẫu</h1>
       <form className="create-class-template-form" onSubmit={handleSubmit}>
+        {/* Hiển thị thông báo lỗi hoặc thành công */}
         {error && <p className="error-message">{error}</p>}
         {success && <p className="success-message">{success}</p>}
 
+        {/* Tên lớp học */}
         <div className="form-group">
           <label htmlFor="name">Tên lớp học</label>
           <input
@@ -64,6 +75,7 @@ const CreateClassTemplatePage = () => {
           />
         </div>
 
+        {/* Mô tả */}
         <div className="form-group">
           <label htmlFor="description">Mô tả</label>
           <textarea
@@ -74,6 +86,7 @@ const CreateClassTemplatePage = () => {
           ></textarea>
         </div>
 
+        {/* Thời lượng mặc định */}
         <div className="form-group">
           <label htmlFor="defaultDuration">Thời lượng mặc định (phút)</label>
           <input
@@ -85,6 +98,7 @@ const CreateClassTemplatePage = () => {
           />
         </div>
 
+        {/* Số lượng người tham gia tối đa */}
         <div className="form-group">
           <label htmlFor="maxParticipants">
             Số lượng người tham gia tối đa
@@ -98,6 +112,7 @@ const CreateClassTemplatePage = () => {
           />
         </div>
 
+        {/* Nút submit */}
         <button type="submit" className="btn-submit">
           Tạo lớp học mẫu
         </button>

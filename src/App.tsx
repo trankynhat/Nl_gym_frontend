@@ -4,11 +4,12 @@ import LoginPage from "./views/LoginPage";
 import Navbar from "./views/Navbar";
 import SignUpPage from "./views/SignupPage";
 import Profile from "./views/Profile";
-import AdminPage from "./views/AdminPage";
-import UserListPage from "./views/UserListPage";
-import CreateClassTemplatePage from "./views/CreateClassTemplatePage";
-import ActiveClassesPage from "./views/ActiveClassesPage";
-import CreateCoachPage from "./views/CreateCoachPage";
+import AdminPage from "./views/admin/AdminPage";
+import UserListPage from "./views/admin/UserListPage";
+import CreateClassTemplatePage from "./views/admin/CreateClassTemplatePage";
+import ActiveClassesPage from "./views/admin/ActiveClassesPage";
+import CreateCoachPage from "./views/admin/CreateCoachPage";
+import CreateClass from "./views/coach/CreateClassPage";
 function App() {
   return (
     <>
@@ -25,7 +26,8 @@ function App() {
           element={<CreateClassTemplatePage />}
         />
         <Route path="/admin/add-coach" element={<CreateCoachPage />} />
-        <Route path="admin/classes" element={<ActiveClassesPage />} />
+        <Route path="/admin/classes" element={<ActiveClassesPage />} />
+        <Route path="/coach/create-class" element={<CreateClass />} />
       </Routes>
     </>
   );

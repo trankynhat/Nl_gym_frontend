@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/CreateCoachPage.css";
+import "../../styles/CreateCoachPage.css";
 
 const CreateCoachPage = () => {
   const [fullName, setFullName] = useState("");

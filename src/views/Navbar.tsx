@@ -50,6 +50,7 @@ function Navbar() {
             </>
           ) : (
             <>
+              {/* Hiển thị menu cho ADMIN */}
               {role === "ADMIN" && (
                 <li>
                   <NavLink
@@ -60,6 +61,30 @@ function Navbar() {
                   </NavLink>
                 </li>
               )}
+
+              {/* Hiển thị menu cho COACH */}
+              {role === "COACH" && (
+                <>
+                  <li>
+                    <NavLink
+                      to="/coach/create-class"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      My Classes
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/coach/create-class"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      Create Class
+                    </NavLink>
+                  </li>
+                </>
+              )}
+
+              {/* Hiển thị menu chung cho tất cả người dùng đã đăng nhập */}
               <li>
                 <NavLink
                   to="/profile"

@@ -1,6 +1,6 @@
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-import "../styles/AdminPage.css"; // Import file CSS
+import "../../styles/AdminPage.css"; // Import file CSS
 
 const AdminPage = () => {
   const { role } = useAuth();
